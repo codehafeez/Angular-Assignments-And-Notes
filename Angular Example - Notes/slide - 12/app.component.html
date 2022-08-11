@@ -1,0 +1,45 @@
+<button style="margin-right:20px;" (click)="fun1()">Funciton - 01</button>
+<button (click)="fun2('test-msg')">Funciton - 02</button>
+
+<hr/>
+<div *ngFor="let product of products"><h3>{{ product }}</h3></div>
+
+<hr/>
+<div *ngFor="let studnet of students"><h3>{{ studnet.name }} = {{ studnet.age }}</h3></div>
+
+<hr/>
+<div *ngIf="loding">loading true</div>
+
+<hr/>
+<div *ngIf="isLogin; else loggedOut">login true</div>
+<ng-template #loggedOut>login false</ng-template>
+
+<hr/>
+<ng-container *ngIf="loding;  then showDiv1; else showDiv2"></ng-container>
+<ng-template #showDiv1>Div 1 Area</ng-template>
+<ng-template #showDiv2>Div 2 Area</ng-template>
+
+<hr/>
+<ng-container [ngSwitch]="true">
+<div *ngSwitchCase="myNumberValue === 1">First</div>
+<div *ngSwitchCase="myNumberValue === 2">Second</div>
+<div *ngSwitchDefault>Third</div>
+</ng-container>
+
+
+<hr/>
+<ul *ngFor="let person of people"><li [ngStyle]="{'color':getColor(person.country)}"> {{ person.name }} ({{ person.country }})</li></ul>
+
+<hr/>
+<ul *ngFor="let person of people">
+<li [ngStyle]="{'color':getColor(person.country) , 'font-size.px':30}"> {{ person.name }} ({{ person.country }})</li>
+</ul>
+
+
+<hr/>
+<p [ngStyle]="{backgroundColor: myColor()}">{{serverStatus}}</p>  
+<p [ngStyle]="{backgroundColor: myColorValue}">{{serverStatus}}</p>  
+
+<hr/>
+<p class="{{myClassValue}}">{{serverStatus}}</p>  
+<style>.myClassValue{ color:blue; font-size:30px; }</style>

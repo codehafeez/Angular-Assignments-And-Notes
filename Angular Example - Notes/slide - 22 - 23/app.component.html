@@ -1,0 +1,16 @@
+<h1>Service Exampe Simple Get Data</h1>
+<h3>Name : {{myName}} = Age : {{myAge}}</h3>
+<hr/>
+<h1>Service Exampe Get Data From API</h1>
+<p>https://jsonplaceholder.typicode.com/todos/</p>
+<style>td{ border: solid 1px;}</style>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Title</td>
+    </tr>
+    <tr *ngFor="let item of data">
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+    </tr>
+</table>

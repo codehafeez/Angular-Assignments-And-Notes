@@ -1,0 +1,10 @@
+ng new crud-simple
+cd crud-simple
+ng serve
+
+ng g m users --routing
+ng g c users/add
+ng g c users/edit
+ng g c users/list
+
+ng generate service list-service
