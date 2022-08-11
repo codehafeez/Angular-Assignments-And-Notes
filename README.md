@@ -1,3 +1,3 @@
-"# Angular-Assignments-And-Notes" 
+"# Angular - Assignments and notes" 
 
 "# More information to visit my webiste: www.codehafeez.com"
